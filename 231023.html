@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>感知机 - 统计学习方法学习笔记</title>
+        <title>k近邻法 - 统计学习方法学习笔记</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="230911.html"><strong aria-hidden="true">1.</strong> 统计学习方法概论</a></li><li class="chapter-item expanded "><a href="230925.html" class="active"><strong aria-hidden="true">2.</strong> 感知机</a></li><li class="chapter-item expanded "><a href="231009.html"><strong aria-hidden="true">3.</strong> 向量机</a></li><li class="chapter-item expanded "><a href="231016.html"><strong aria-hidden="true">4.</strong> 支持向量机</a></li><li class="chapter-item expanded "><a href="231023.html"><strong aria-hidden="true">5.</strong> k近邻法</a></li><li class="chapter-item expanded "><a href="231030.html"><strong aria-hidden="true">6.</strong> 决策树</a></li><li class="chapter-item expanded "><a href="231106.html"><strong aria-hidden="true">7.</strong> 概率图</a></li><li class="chapter-item expanded "><a href="231113.html"><strong aria-hidden="true">8.</strong> 课堂汇报</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="230911.html"><strong aria-hidden="true">1.</strong> 统计学习方法概论</a></li><li class="chapter-item expanded "><a href="230925.html"><strong aria-hidden="true">2.</strong> 感知机</a></li><li class="chapter-item expanded "><a href="231009.html"><strong aria-hidden="true">3.</strong> 向量机</a></li><li class="chapter-item expanded "><a href="231016.html"><strong aria-hidden="true">4.</strong> 支持向量机</a></li><li class="chapter-item expanded "><a href="231023.html" class="active"><strong aria-hidden="true">5.</strong> k近邻法</a></li><li class="chapter-item expanded "><a href="231030.html"><strong aria-hidden="true">6.</strong> 决策树</a></li><li class="chapter-item expanded "><a href="231106.html"><strong aria-hidden="true">7.</strong> 概率图</a></li><li class="chapter-item expanded "><a href="231113.html"><strong aria-hidden="true">8.</strong> 课堂汇报</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -171,45 +171,37 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>一、感知机的历史</p>
-<p><img src="https://vip2.loli.io/2023/09/25/MU7vJu8w6keFcnL.webp" alt="" /></p>
-<p>感知机英文单词：perceptron（percept+neuron，感知神经元）</p>
-<p>二、单个感知机只能处理二分类问题。与现代神经网络相比，感知机缺少反向传播算法，但已初具神经网络的雏形。</p>
-<p>三、原始感知机的三要素</p>
-<p><img src="https://vip2.loli.io/2023/09/25/u25JTnyhcWYbrSH.webp" alt="" /></p>
-<p>四、感知机初始版本的应用</p>
-<p>手写数字识别：http://yann.lecun.com/exdb/mnist/</p>
-<p>五、Novikoff定理</p>
-<p>对于线性可分的数据集，感知机学习算法收敛，即经过有限次迭代可以得到一个将数据集完全正确划分的分离超平面。</p>
-<p>六、二维感知机的三元素</p>
-<p><img src="https://vip2.loli.io/2023/09/25/UaYcfKO2BgewsFJ.webp" alt="" /></p>
-<p>七、随机梯度下降法（Random gradient drop method，RGD）</p>
-<p><img src="https://vip2.loli.io/2023/09/25/nGrCYJPjgS5dQfK.webp" alt="" /></p>
-<p>注：</p>
-<ul>
-<li>
-<p>感知机学习算法存在多解</p>
-</li>
-<li>
-<p>初值和迭代过程中误分类点的选择顺序均会产生不同的解。</p>
-</li>
-</ul>
-<p>八、课堂练习</p>
-<p><img src="https://vip2.loli.io/2023/09/25/yHDRretJMlx8maP.webp" alt="" /></p>
-<p>解析：</p>
-<p><img src="https://vip2.loli.io/2023/09/25/kjS293YuXONnEWK.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/09/25/pneZfuw8Ds96FvV.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/09/25/jRDUbqHy9CZfVcx.webp" alt="" /></p>
+                        <p>课堂作业</p>
+<p><img src="https://vip2.loli.io/2023/10/26/gOwxHMWJeabYmDn.webp" alt="" /></p>
+<p>提示：队列实现</p>
+<p>期中作业</p>
+<p><img src="https://vip2.loli.io/2023/10/28/XdurkOgEsL4cC3K.webp" alt="" /> 、</p>
+<p>K-NN(K-Nearest Neighbors)算法</p>
+<p>输入、输出、类别</p>
+<p>距离度量、分类决策规则</p>
+<p>闵式距离</p>
+<p>k值的选择</p>
+<p>k较小</p>
+<p>k较大</p>
+<p>k值的选择</p>
+<p>knn方法的模型：训练集+距离度量+分类决策规则+k</p>
+<p>交叉验证法、k折交叉验证法</p>
+<p>分类决策规则</p>
+<p>论文：Nearest Neightbour Pattern Classification</p>
+<p>kd树，如何找到k个最近邻点</p>
+<p>kd树的构造</p>
+<p>搜索kd树</p>
+<p>kd树的最近邻搜索算法</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="230911.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="231016.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="231009.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="231030.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -219,11 +211,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="230911.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="231016.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="231009.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="231030.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
