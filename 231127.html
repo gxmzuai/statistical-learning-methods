@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>向量机 - 统计学习方法学习笔记</title>
+        <title>隐马尔可夫模型2 - 统计学习方法学习笔记</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="230911.html"><strong aria-hidden="true">1.</strong> 统计学习方法概论</a></li><li class="chapter-item expanded "><a href="230925.html"><strong aria-hidden="true">2.</strong> 感知机</a></li><li class="chapter-item expanded "><a href="231009.html" class="active"><strong aria-hidden="true">3.</strong> 向量机</a></li><li class="chapter-item expanded "><a href="231016.html"><strong aria-hidden="true">4.</strong> 支持向量机</a></li><li class="chapter-item expanded "><a href="231023.html"><strong aria-hidden="true">5.</strong> k近邻法</a></li><li class="chapter-item expanded "><a href="231030.html"><strong aria-hidden="true">6.</strong> 决策树</a></li><li class="chapter-item expanded "><a href="231106.html"><strong aria-hidden="true">7.</strong> 概率图1</a></li><li class="chapter-item expanded "><a href="231113.html"><strong aria-hidden="true">8.</strong> 课堂汇报</a></li><li class="chapter-item expanded "><a href="231120.html"><strong aria-hidden="true">9.</strong> 概率图2 && 隐马尔可夫模型1</a></li><li class="chapter-item expanded "><a href="231127.html"><strong aria-hidden="true">10.</strong> 隐马尔可夫模型2</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="230911.html"><strong aria-hidden="true">1.</strong> 统计学习方法概论</a></li><li class="chapter-item expanded "><a href="230925.html"><strong aria-hidden="true">2.</strong> 感知机</a></li><li class="chapter-item expanded "><a href="231009.html"><strong aria-hidden="true">3.</strong> 向量机</a></li><li class="chapter-item expanded "><a href="231016.html"><strong aria-hidden="true">4.</strong> 支持向量机</a></li><li class="chapter-item expanded "><a href="231023.html"><strong aria-hidden="true">5.</strong> k近邻法</a></li><li class="chapter-item expanded "><a href="231030.html"><strong aria-hidden="true">6.</strong> 决策树</a></li><li class="chapter-item expanded "><a href="231106.html"><strong aria-hidden="true">7.</strong> 概率图1</a></li><li class="chapter-item expanded "><a href="231113.html"><strong aria-hidden="true">8.</strong> 课堂汇报</a></li><li class="chapter-item expanded "><a href="231120.html"><strong aria-hidden="true">9.</strong> 概率图2 && 隐马尔可夫模型1</a></li><li class="chapter-item expanded "><a href="231127.html" class="active"><strong aria-hidden="true">10.</strong> 隐马尔可夫模型2</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -171,102 +171,19 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>一、感知机原始版本的三要素</p>
-<p><img src="https://vip2.loli.io/2023/10/09/u5wEAFC4mpbgY7X.webp" alt="" /></p>
-<p>二、感知机二维模型的三要素</p>
-<p><img src="https://vip2.loli.io/2023/10/09/ktvcWf7GDXYAobC.webp" alt="" /></p>
-<p>注：</p>
-<p><img src="https://vip2.loli.io/2023/10/09/QmzVHaPYTMh8OoU.webp" alt="" /></p>
-<p>三、支持向量机(support vector machine)</p>
-<p><img src="https://vip2.loli.io/2023/10/09/xPYHeG3nXzQgZk6.webp" alt="" /></p>
-<p>四、线性支持向量机</p>
+                        <p>1、课堂关键字</p>
 <ul>
-<li>线性可分支持向量机</li>
-</ul>
-<p><img src="https://vip2.loli.io/2023/10/09/4XFBLPJ36OKx9AT.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/09/zlSoBtub37GaRh1.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/09/PqZoC4QYhf9pnMB.webp" alt="" /></p>
-<p>五、支持向量</p>
-<p><img src="https://vip2.loli.io/2023/10/09/ChtuFMQ1LoBS2Jp.webp" alt="" /></p>
-<p>六、支持向量机的目标函数，限制条件</p>
-<p><img src="https://vip2.loli.io/2023/10/09/BsoXOFG3wShjb2P.webp" alt="" /></p>
-<p>七、b站课程笔记</p>
-<p>1、svm的发明人—vapnik发明</p>
-<p>2、线性模型</p>
-<p><img src="https://vip2.loli.io/2023/10/09/uvJglyRpCf937wW.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/09/uhoHjzi6XDOkpbM.webp" alt="" /></p>
-<p>3、svm是最大化间隔的方法。</p>
-<p>4、将平行线插到的向量叫支持向量(support verctors)</p>
-<p>5、定义数据及标签和线性模型</p>
-<p><img src="https://vip2.loli.io/2023/10/09/Zr1xLAinkeQXmsK.webp" alt="" /></p>
-<p>机器学习模型的情况</p>
-<ul>
-<li>
-<p>限定模型</p>
-</li>
-<li>
-<p>待定参数</p>
-</li>
-<li>
-<p>用训练的样本确定待定参数的具体取值。</p>
-</li>
-</ul>
-<p>6、训练集线性可分</p>
-<p><img src="https://vip2.loli.io/2023/10/09/NZDhE5KSlPACiIs.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/09/15MhAgyx2uv3qNw.webp" alt="" /></p>
-<p>7、事实</p>
-<p><img src="https://vip2.loli.io/2023/10/09/seNUu4SQjfpaq9m.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/09/HoBLqZwAhjC9OzF.webp" alt="" /></p>
-<p>8、线性可分支持向量机小结</p>
-<p><img src="https://vip2.loli.io/2023/10/09/xTjqRY1U7naWCcF.webp" alt="" /></p>
-<p>凸集、非凸集</p>
-<p>在集合里面，任意取两个点，这两个点之间的连线，线段上的所有的点还在集合内，则其为凸集；反之，则为非凸集。</p>
-<p>仿射集一定是凸集。</p>
-<p><img src="https://vip2.loli.io/2023/10/09/3MOELTenPR64vpU.webp" alt="" /></p>
-<p>八、凸函数</p>
-<blockquote>
-<p>中国大陆数学界某些机构关于函数凹凸性定义和国外的定义是相反的。Convex Function在某些中国大陆的数学书中指凹函数。Concave Function指凸函数。但在中国大陆涉及经济学的很多书中，凹凸性的提法和其他国家的提法是一致的，也就是和数学教材是反的。举个例子，同济大学高等数学教材对函数的凹凸性定义与本条目相反，本条目的凹凸性是指其上方图是凹集或凸集，而同济大学高等数学教材则是指其下方图是凹集或凸集，两者定义正好相反。</p>
-</blockquote>
-<p><img src="https://vip2.loli.io/2023/10/09/cWGT9aXrUIhqLo1.webp" alt="" /> </p>
-<p><img src="https://vip2.loli.io/2023/10/09/rhcXuewPAx1JLmq.webp" alt="" /></p>
-<p>九、凸优化问题</p>
-<p>目标函数是凸函数，约束条件必须是凸集，组成的问题才是凸优化问题。</p>
-<p><img src="https://vip2.loli.io/2023/10/09/Za7jq8DFntVKgS4.webp" alt="" /></p>
-<p>十、仿射集</p>
-<p><img src="https://vip2.loli.io/2023/10/09/9PlmiOkE8LKzIRQ.webp" alt="" /></p>
-<p>十一、KTT条件</p>
-<p><img src="https://vip2.loli.io/2023/10/09/RATFltXOuBIyQ1h.webp" alt="" /></p>
-<p>十二、对偶算法</p>
-<p>对偶问题是SVM中的一个核心概念，主要是将原始的优化问题转化为一个等价的，但更容易求解的问题。</p>
-<p><img src="https://vip2.loli.io/2023/10/09/dAMTONh4bPDsIGr.webp" alt="" /></p>
-<p>十三、小结</p>
-<p>线性可分SVM</p>
-<p>模型：f(x)=wx+b</p>
-<p>策略：间隔最大化</p>
-<p>方法：</p>
-<ul>
-<li>
-<p>图像法</p>
-</li>
-<li>
-<p>拉格朗日函数+kkt条件</p>
-</li>
-<li>
-<p>对偶算法</p>
-</li>
+<li>隐马尔可夫模型</li>
 </ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="230925.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="231120.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="231016.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -274,13 +191,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="230925.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="231120.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="231016.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
             </nav>
 
         </div>
